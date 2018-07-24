@@ -6,11 +6,11 @@ variable lambda_name {
   default = "calculator_lambda"
 }
 
-data "archive_file" "lambda" {
-type = "zip"
-source_file = "${path.module}\\calculatorRestAppJava-0.0.1-SNAPSHOT.jar"
-output_path = "${path.module}\\calculatorRestAppJava-0.0.1-SNAPSHOT.zip"
-}
+//data "archive_file" "lambda" {
+//type = "zip"
+//source_file = "${path.module}\\calculatorRestAppJava-0.0.1-SNAPSHOT.jar"
+//output_path = "${path.module}\\calculatorRestAppJava-0.0.1-SNAPSHOT.zip"
+//}
 
 resource "aws_lambda_function" "function_lambda" {
   function_name = "${var.lambda_name}"
